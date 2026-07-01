@@ -15,7 +15,10 @@ export function getSearchData(platform: Platform): SearchData {
 
 export function extractProfiles(platform: Platform): UserProfileSummary[] {
   const data = getSearchData(platform);
-  const profiles = data.accounts.map((item) => item.account.user_profile);
+  const profiles = data.accounts.map((item) => ({
+    ...item.account.user_profile,
+    platform,
+  }));
   return [...profiles].sort((a, b) => b.followers - a.followers);
 }
 

@@ -13,6 +13,7 @@ export interface UserProfileSummary {
   handle?: string;
   custom_name?: string;
   avg_views?: number;
+  platform?: Platform;
 }
 
 export interface SearchAccount {
