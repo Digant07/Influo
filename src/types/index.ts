@@ -11,6 +11,7 @@ export interface UserProfileSummary {
   engagements?: number;
   engagement_rate?: number;
   handle?: string;
+  custom_name?: string;
   avg_views?: number;
 }
 
